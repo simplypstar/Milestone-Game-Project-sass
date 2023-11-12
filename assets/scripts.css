@@ -1,0 +1,197 @@
+/* Cascading Style Sheet   */
+
+h1 {
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    color: rgb(241, 212, 133);
+}
+
+h2 {
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 20px;
+}
+
+.pageContent {
+    align-items: center;
+    margin: 20px 30px 20px 30px;
+    background-color:rgb(230, 92, 230);
+    min-width: 1080px;
+    min-height: 750px;
+    max-height: 1920px;
+    align-content: center;
+}
+
+.gameSelect {
+    display: flex;
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    width: 350px;
+    border: 5px; 
+    margin: 0 auto auto 375px;
+}
+
+.gameSelect select {
+    font-family: "Rokkitt", "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+/* Configure the Grid layout for the Suduko board */
+/* The board is comprised of 9 columns, 9 rows, and 81 small boxes */
+#top-row, #middle-row, #bottom-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    width: 65%;
+    height: 100px;
+    margin-left: 215px; 
+ } 
+  
+ .col {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px;
+    box-sizing: content-box;
+    border: 1px solid rgba(1, 1, 1);
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+/*Add grid lines inside each grid box */  
+.col > * {    
+border: 1px solid black;    
+}
+
+/* Set the style for the input fields  */
+input { 
+text-align: center; 
+border: 2px;    
+font-family: "Lucida Console", Courier, monospace;  
+font-size: 20px;    
+font-weight: bold;  
+height: 25px;
+width:  100%;   
+margin: 0;  
+background: transparent;    
+}   
+
+/* Changes the background of a selected input field to yellow */    
+input:focus {   
+background-color: rgb(248, 248, 73);    
+} 
+
+/* Remove scroll arrows from input fields*/ 
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+} 
+
+/* Set the bsckground color for the grids */
+#top_left_grid, #top_right_grid, #middle_center_grid, 
+#bottom_left_grid, #bottom_right_grid {
+    background-color:rgb(180, 180, 236); 
+}
+
+/* Set the bsckground color for the grids */
+#top_center_grid, #middle_left_grid, #middle_right_grid, #bottom_center_grid {
+    background-color:rgb(217, 217, 216);  
+}
+
+/* Set thee font formatting got the 'p' elements */
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 1px;
+    margin-left: 215px;
+    font-weight: bold;
+
+}
+
+/* Buttons at the bottom of the game window used to fill the blank spaces on the board */
+.buttons {
+    display: grid;
+    display: inline-block;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(117, 168, 219);
+    border: 2px solid black;
+    font-size: 32px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 20px 5px;
+    box-shadow: 5px 0px #818080;
+    margin-left: 80px;
+} 
+
+/* The StartButton button runs the StartGame function which loads the form in the initial or start state */
+.startButton {
+    background-color: rgb(14, 67, 121);
+    width: 10%;
+    border: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #f86170;
+    cursor: pointer;
+    border-radius: 5px 20px;
+    box-shadow: 2px 6px #818080;
+    text-decoration: none;
+    float: right;
+    margin-right: 50px;
+}
+
+/* The viewGameBoard button runs the StartGame function which loads the form in the initial or start state */
+.viewGameBoard {
+    background-color: rgb(14, 67, 121);
+    width: 10%;
+    border: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #f86170;
+    cursor: pointer;
+    border-radius: 5px 20px;
+    box-shadow: 4px 6px #818080;
+    text-decoration: none; 
+    margin-left: 150px;
+}
+
+/* The viewRules button opens a .pdf file that contains the rules and how to play Suduko */
+.viewRules {
+    background-color: rgb(14, 67, 121);
+    width: 10%;
+    border: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    color: #f86170;
+    cursor: pointer;
+    border-radius: 5px 20px;
+    box-shadow: 4px 6px #818080;
+    text-decoration: none;
+    margin-left: 150px;
+}
+
+/* Added animation to the buttons */
+.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover   {
+    background-color: #3b6dec
+}
+
+/* Added color change when the mouse hovers over button */
+.buttons:active, .startButton:active, .viewGameBoard:active .viewRules:active {
+    background-color: #f86170;
+    box-shadow: 10px 5px 5px red; /*#666;*/
+    transform: translateY(2px);
+}
+
+

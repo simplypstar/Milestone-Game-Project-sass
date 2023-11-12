@@ -1,0 +1,45 @@
+@use "utilities";
+@use "config";
+
+%allbtn {
+    border: 2px solid rgb(130, 160, 209);
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 0px #787878;
+
+    &:hover {
+        transform: scale(80%);
+        text-decoration: none;
+    }
+
+    &:active {
+        background-color: #f86170;
+        box-shadow: 10px 5px 5px red;
+        transform: translateY(2px);
+    }
+}
+
+%gamebtn {
+    @extend %allbtn;
+    background-color: #005682;   //$gamebutton;  
+    width: 10%;
+    padding: 5px;
+    font-size: 12px;
+    color: #f86170;
+    border-radius: 5px 20px;
+    float: right;
+    margin-right: 50px;
+}
+
+%numbbtn {
+    @extend %allbtn;
+    display: grid;
+    display: inline-block;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #267ca8;
+    font-size: 32px;
+    border-radius: 20px 5px;  
+    margin-left: 80px;
+}
