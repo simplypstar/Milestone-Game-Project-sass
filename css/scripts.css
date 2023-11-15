@@ -1,90 +1,83 @@
-.box {
-  max-width: 1100px;
-  padding: 0 30px;
-  margin: 0 auto;
-  overflow: auto;
-}
-
-.buttons, .startButton {
+.buttons, .startButton, .viewGameBoard, .viewRules {
   border: 2px solid rgb(130, 160, 209);
   font-weight: bolder;
   text-align: center;
+  color: #000000;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 5px 0px #787878;
+  box-shadow: 5px 3px #787878;
 }
-.buttons:hover, .startButton:hover {
+.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover {
   transform: scale(80%);
   text-decoration: none;
 }
-.buttons:active, .startButton:active {
-  background-color: #f86170;
-  box-shadow: 10px 5px 5px red;
+.buttons:active, .startButton:active, .viewGameBoard:active, .viewRules:active {
+  background-color: #f97b88;
+  box-shadow: 2px 1px 1px red;
   transform: translateY(2px);
 }
 
-.startButton {
-  background-color: #005682;
+.startButton, .viewGameBoard, .viewRules {
+  background-color: #0e86c2;
   width: 10%;
   padding: 5px;
   font-size: 12px;
-  color: #f86170;
+  color: #000000;
   border-radius: 5px 20px;
   float: right;
-  margin-right: 50px;
+  margin-right: 175px;
+  margin-top: -15px;
 }
 
 .buttons {
   display: grid;
   display: inline-block;
-  grid-template-columns: repeat(6, 1fr);
-  background-color: #267ca8;
-  font-size: 32px;
-  border-radius: 20px 5px;
-  margin-left: 80px;
+  background-color: #006699;
+  font-size: 28px;
+  border-radius: 25px 3px;
+  margin-left: 100px;
+  padding: 5px;
 }
 
 /* Cascading Style Sheet   */
 h1 {
-  font-family: "Rokkitt", "Times New Roman", Times, serif;
-  font-weight: bolder;
+  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
+  font-weight: bold;
   font-style: italic;
   text-align: center;
-  color: rgb(241, 212, 133);
+  font-Size: 30px;
+  color: rgb(205, 161, 38);
+  line-height: 10px;
 }
 
 h2 {
-  font-family: "Rokkitt", "Times New Roman", Times, serif;
+  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
   font-size: 16px;
-  font-weight: bolder;
+  font-weight: bold;
   text-align: center;
   line-height: 20px;
 }
 
 .pageContent {
-  align-items: center;
-  margin: 20px 30px 20px 30px;
-  background-color: #990066;
+  background-color: #06789b;
   min-width: 1080px;
   min-height: 750px;
   max-height: 1920px;
-  align-content: center;
 }
 
 .gameSelect {
   display: flex;
-  font-family: "Rokkitt", "Times New Roman", Times, serif;
-  font-size: 14px;
+  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
+  font-size: 16px;
   font-weight: bolder;
   text-align: center;
   width: 350px;
   border: 5px;
   margin: 0 auto auto 375px;
 }
-
 .gameSelect select {
-  font-family: "Rokkitt", "Times New Roman", Times, serif;
-  font-size: 14px;
+  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
+  font-size: 16px;
   font-weight: bolder;
 }
 
@@ -109,7 +102,7 @@ h2 {
   width: 100%;
 }
 
-/*Add grid lines inside each grid box */
+/* Add grid lines inside each grid box */
 .col > * {
   border: 1px solid black;
 }
@@ -118,7 +111,7 @@ h2 {
 input {
   text-align: center;
   border: 2px;
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", "Courier", "monospace";
   font-size: 20px;
   font-weight: bold;
   height: 25px;
@@ -127,7 +120,7 @@ input {
   background: transparent;
 }
 
-/* Changes the background of a selected input field to yellow */
+/* Change the background of a selected input field to yellow */
 input:focus {
   background-color: rgb(248, 248, 73);
 }
@@ -142,59 +135,28 @@ input::-webkit-inner-spin-button {
 /* Set the bsckground color for the grids */
 #top_left_grid, #top_right_grid, #middle_center_grid,
 #bottom_left_grid, #bottom_right_grid {
-  background-color: rgb(180, 180, 236);
+  background-color: #c0dde6;
 }
 
 /* Set the bsckground color for the grids */
 #top_center_grid, #middle_left_grid, #middle_right_grid, #bottom_center_grid {
-  background-color: rgb(217, 217, 216);
+  background-color: #e6f1f5;
 }
 
-/* Set thee font formatting got the 'p' elements */
-p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  line-height: 1px;
+.howtoplay {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
   margin-left: 215px;
-  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+  width: 65%;
+  text-align: justify;
+  font-size: 16px;
 }
 
 /* Buttons at the bottom of the game window used to fill the blank spaces on the board */
 /* The StartButton button runs the StartGame function which loads the form in the initial or start state */
-/* The viewGameBoard button runs the StartGame function which loads the form in the initial or start state */
-.viewGameBoard {
-  background-color: rgb(14, 67, 121);
-  width: 10%;
-  border: 3px solid black;
-  text-align: center;
-  padding: 5px;
-  font-size: 10px;
-  font-weight: bolder;
-  color: #f86170;
-  cursor: pointer;
-  border-radius: 5px 20px;
-  box-shadow: 4px 6px #818080;
-  text-decoration: none;
-  margin-left: 150px;
-}
-
-/* The viewRules button opens a .pdf file that contains the rules and how to play Suduko */
-.viewRules {
-  background-color: rgb(14, 67, 121);
-  width: 10%;
-  border: 3px solid black;
-  text-align: center;
-  padding: 5px;
-  font-size: 10px;
-  font-weight: bolder;
-  color: #f86170;
-  cursor: pointer;
-  border-radius: 5px 20px;
-  box-shadow: 4px 6px #818080;
-  text-decoration: none;
-  margin-left: 150px;
-}
-
 /* Added animation to the buttons */
 .buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover {
   background-color: #3b6dec;

@@ -1,4 +1,4 @@
-# Milestone-Game-Project
+## Milestone-Game-Project
  Online Web-based Sudoku Game
 
 Had to replace the dash (-) in the id names with an underscore (_) to be comppatible with javascript
@@ -13,9 +13,19 @@ Added a function the verifies the player selected the correct number for a field
 Added counters to check when all 81 input fields are filed; this indicated the end of the game
 Added an applause3.mp3 file that plays when the board is completed
 
-References:
+## Revamped with SCSS styling:
+- Added 'How To Play' as the bolded title of the section below the game board. Styled this 
+  text-box to word-wrap and justify the text.
+- Followed SCSS styling guidelines to streamline and reduce/eliminate repetative stylings for
+  elements such as:
+  - colors (background, text, buttons, button animation, and button shadows)
+  - font-families
+  - button appearane & animation
+  - inheritance
 
-W3W Schools (https://www.w3schools.com) was used for most of the assistance I needed
+## References:
+
+W3W Schools (https://www.w3schools.com) was used for most of the assistance I needed with styling 
 
 YouTube- Work with CSS Grid Lines Using Grid Column Start and Grid Row Start by Ralph
 Function to identify the active elementt found on:  https://www.w3schools.com/jsref/prop_document_activeelement.asp
@@ -23,7 +33,7 @@ Function to identify the active elementt found on:  https://www.w3schools.com/js
 Rules and how to play Suduko .pdf obtained from GoldStar games - https://www.goldstarpuzzles.com/solutions
 Free applause .mp3 downloaded from https://www.freesoundeffects.com/free-sounds/applause-10033/  
 
-css references: 
+## CSS References: 
  - add internal boarers to each grid box - https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/
 
  Grid-Gap property - https://www.w3schools.com/cssref/tryit.php?filename=trycss_grid-gap
@@ -34,7 +44,7 @@ css references:
 
 How TO - Animate Buttons - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
 
-
+## JavaScript References:
 JavaScript Switch Statement
 https://www.w3schools.com/js/js_switch.asp
 

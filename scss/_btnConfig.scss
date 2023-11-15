@@ -1,13 +1,14 @@
-@use "utilities";
-@use "config";
+// @use "utilities";
+@import "config";
 
 %allbtn {
     border: 2px solid rgb(130, 160, 209);
     font-weight: bolder;
     text-align: center;
+    color: $buttonfontcolor;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 5px 0px #787878;
+    box-shadow: 5px 3px #787878;
 
     &:hover {
         transform: scale(80%);
@@ -15,31 +16,32 @@
     }
 
     &:active {
-        background-color: #f86170;
-        box-shadow: 10px 5px 5px red;
+        background-color: #f97b88;
+        box-shadow: 2px 1px 1px red;
         transform: translateY(2px);
     }
 }
 
 %gamebtn {
     @extend %allbtn;
-    background-color: #005682;   //$gamebutton;  
+    background-color: $gamebutton;
     width: 10%;
     padding: 5px;
     font-size: 12px;
-    color: #f86170;
+    color: $buttonfontcolor;
     border-radius: 5px 20px;
     float: right;
-    margin-right: 50px;
+    margin-right: 175px;
+    margin-top: -15px;
 }
 
 %numbbtn {
     @extend %allbtn;
     display: grid;
     display: inline-block;
-    grid-template-columns: repeat(6, 1fr);
-    background-color: #267ca8;
-    font-size: 32px;
-    border-radius: 20px 5px;  
-    margin-left: 80px;
+    background-color: $numbbutton;
+    font-size: 28px;
+    border-radius: 25px 3px;  
+    margin-left: 100px;
+    padding: 5px;
 }
