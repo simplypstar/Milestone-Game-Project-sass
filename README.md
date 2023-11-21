@@ -13,7 +13,7 @@ Added a function the verifies the player selected the correct number for a field
 Added counters to check when all 81 input fields are filed; this indicated the end of the game
 Added an applause3.mp3 file that plays when the board is completed
 
-## Revamped with SCSS styling:
+## Revamped the project with SCSS styling:
 - Added 'How To Play' as the bolded title of the section below the game board. Styled this 
   text-box to word-wrap and justify the text.
 - Followed SCSS styling guidelines to streamline and reduce/eliminate repetative stylings for

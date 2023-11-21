@@ -1,47 +1,59 @@
 // @use "utilities";
 @import "config";
 
+
+// Formatting that applies to all buttons
 %allbtn {
     border: 2px solid rgb(130, 160, 209);
-    font-weight: bolder;
+    font-weight: bold;
     text-align: center;
     color: $buttonfontcolor;
     cursor: pointer;
     text-decoration: none;
     box-shadow: 5px 3px #787878;
 
+    // Action taken when the mouse hovers over a button
     &:hover {
         transform: scale(80%);
         text-decoration: none;
     }
 
+    // Action taken when the mouse clicks on a button
     &:active {
         background-color: #f97b88;
-        box-shadow: 2px 1px 1px red;
-        transform: translateY(2px);
+        box-shadow: 1px 1px 1px red;
+        transform: translateY(1px);
     }
 }
 
+// Formats the appearance of the game buttons
 %gamebtn {
     @extend %allbtn;
     background-color: $gamebutton;
-    width: 10%;
-    padding: 5px;
-    font-size: 12px;
+    width: 15%;
+    padding: 15px;
+    font-size: 14px;
     color: $buttonfontcolor;
     border-radius: 5px 20px;
-    float: right;
-    margin-right: 175px;
-    margin-top: -15px;
 }
 
+// Formats the appearance of the number buttons
 %numbbtn {
     @extend %allbtn;
     display: grid;
     display: inline-block;
     background-color: $numbbutton;
     font-size: 28px;
-    border-radius: 25px 3px;  
-    margin-left: 100px;
-    padding: 5px;
+    border-radius: 25px 10px;  
+    padding: 10px;
+}
+
+// Starts the selected game
+%startbtn {
+    @extend %allbtn;
+    color: $startbutnfontcolor;
+    padding: 15px;
+    position: fixed;
+    top: 55px;
+    right: 100px;
 }

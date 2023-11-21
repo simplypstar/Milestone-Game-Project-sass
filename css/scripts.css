@@ -1,32 +1,30 @@
-.buttons, .startButton, .viewGameBoard, .viewRules {
+/* Cascading Style Sheet   */
+.startButton, .buttons, .viewGameBoard, .viewRules {
   border: 2px solid rgb(130, 160, 209);
-  font-weight: bolder;
+  font-weight: bold;
   text-align: center;
   color: #000000;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 5px 3px #787878;
 }
-.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover {
+.startButton:hover, .buttons:hover, .viewGameBoard:hover, .viewRules:hover {
   transform: scale(80%);
   text-decoration: none;
 }
-.buttons:active, .startButton:active, .viewGameBoard:active, .viewRules:active {
+.startButton:active, .buttons:active, .viewGameBoard:active, .viewRules:active {
   background-color: #f97b88;
-  box-shadow: 2px 1px 1px red;
-  transform: translateY(2px);
+  box-shadow: 1px 1px 1px red;
+  transform: translateY(1px);
 }
 
 .startButton, .viewGameBoard, .viewRules {
   background-color: #0e86c2;
-  width: 10%;
-  padding: 5px;
-  font-size: 12px;
+  width: 15%;
+  padding: 15px;
+  font-size: 14px;
   color: #000000;
   border-radius: 5px 20px;
-  float: right;
-  margin-right: 175px;
-  margin-top: -15px;
 }
 
 .buttons {
@@ -34,51 +32,64 @@
   display: inline-block;
   background-color: #006699;
   font-size: 28px;
-  border-radius: 25px 3px;
-  margin-left: 100px;
-  padding: 5px;
+  border-radius: 25px 10px;
+  padding: 10px;
 }
 
-/* Cascading Style Sheet   */
+.startButton {
+  color: red;
+  padding: 15px;
+  position: fixed;
+  top: 55px;
+  right: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pageContent {
+  background-color: #06789b;
+}
+
 h1 {
   font-family: "Rokkitt", "Times New Roman", "Times", "serif";
   font-weight: bold;
   font-style: italic;
   text-align: center;
   font-Size: 30px;
-  color: rgb(205, 161, 38);
-  line-height: 10px;
+  color: rgb(226, 169, 12);
 }
 
 h2 {
-  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 20px;
-}
-
-.pageContent {
-  background-color: #06789b;
-  min-width: 1080px;
-  min-height: 750px;
-  max-height: 1920px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+  font-size: 14px;
+  line-height: 15px;
+  color: rgb(226, 169, 12);
 }
 
 .gameSelect {
-  display: flex;
-  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
-  font-size: 16px;
-  font-weight: bolder;
-  text-align: center;
-  width: 350px;
-  border: 5px;
-  margin: 0 auto auto 375px;
+  border: 0px;
+  width: 65%;
+  justify-content: center;
 }
-.gameSelect select {
-  font-family: "Rokkitt", "Times New Roman", "Times", "serif";
-  font-size: 16px;
+.gameSelect #selectGame {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
   font-weight: bolder;
+  width: 45%;
+}
+
+.sudokuBox {
+  border: 0px;
+  margin: 0px auto;
+  border: none;
+  width: 65%;
 }
 
 /* Configure the Grid layout for the Suduko board */
@@ -87,60 +98,61 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid black;
-  width: 65%;
+  width: 100%;
   height: 100px;
-  margin-left: 215px;
+  margin: 1px 1x;
+  /* Add grid lines inside each grid box */
+  /* Set the style for the input fields  */
+  /* Change the background of a selected input field to yellow */
+  /* Remove scroll arrows from input fields*/
+  /* Chrome, Safari, Edge, Opera */
 }
-
-.col {
+#top-row .col, #middle-row .col, #bottom-row .col {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 0px;
-  box-sizing: content-box;
   border: 1px solid rgb(1, 1, 1);
-  box-sizing: border-box;
   width: 100%;
+  margin: 0;
+  padding: 0px 0px;
 }
-
-/* Add grid lines inside each grid box */
-.col > * {
+#top-row .col > *, #middle-row .col > *, #bottom-row .col > * {
   border: 1px solid black;
 }
-
-/* Set the style for the input fields  */
-input {
+#top-row input, #middle-row input, #bottom-row input {
   text-align: center;
-  border: 2px;
+  border: 1px;
   font-family: "Lucida Console", "Courier", "monospace";
   font-size: 20px;
   font-weight: bold;
   height: 25px;
   width: 100%;
-  margin: 0;
   background: transparent;
 }
-
-/* Change the background of a selected input field to yellow */
-input:focus {
+#top-row input:focus, #middle-row input:focus, #bottom-row input:focus {
   background-color: rgb(248, 248, 73);
 }
-
-/* Remove scroll arrows from input fields*/
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+#top-row input::-webkit-outer-spin-button,
+#top-row input::-webkit-inner-spin-button, #middle-row input::-webkit-outer-spin-button,
+#middle-row input::-webkit-inner-spin-button, #bottom-row input::-webkit-outer-spin-button,
+#bottom-row input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-/* Set the bsckground color for the grids */
+/* Set the background color for the grids */
 #top_left_grid, #top_right_grid, #middle_center_grid,
 #bottom_left_grid, #bottom_right_grid {
   background-color: #c0dde6;
 }
 
-/* Set the bsckground color for the grids */
+/* Set the background color for the grids */
 #top_center_grid, #middle_left_grid, #middle_right_grid, #bottom_center_grid {
   background-color: #e6f1f5;
+}
+
+.playInfo {
+  margin: 0 auto;
+  border: none;
+  width: 65%;
 }
 
 .howtoplay {
@@ -148,23 +160,20 @@ input::-webkit-inner-spin-button {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-  margin-left: 215px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
-  width: 65%;
+  width: 100%;
   text-align: justify;
   font-size: 16px;
 }
 
-/* Buttons at the bottom of the game window used to fill the blank spaces on the board */
-/* The StartButton button runs the StartGame function which loads the form in the initial or start state */
-/* Added animation to the buttons */
-.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover {
-  background-color: #3b6dec;
+.numbrBtns {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", "sans-serif";
+  border: 2px black;
+  margin: 0px auto;
+  width: 65%;
 }
 
-/* Added color change when the mouse hovers over button */
-.buttons:active, .startButton:active, .viewGameBoard:active .viewRules:active {
-  background-color: #f86170;
-  box-shadow: 10px 5px 5px red; /*#666;*/
-  transform: translateY(2px);
-}/*# sourceMappingURL=scripts.css.map */
+/* Buttons at the bottom of the game window used to fill the blank spaces on the board */
+/* Format the appearance of these buttons */
+/* The StartButton, viewGameBoard and viewRules buttons run functions to complete their task */
+/* Change the startButton font color to Red and set its position in the browser *//*# sourceMappingURL=scripts.css.map */

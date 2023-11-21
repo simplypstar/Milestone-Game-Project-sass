@@ -1,4 +1,4 @@
-// Create JavaScript to control the Sudoku Board
+// Created JavaScript functions to control the Sudoku Board
 
 // Define as global variable to be used with multipe functions
 var activeInput = "";   // Current Active Element
@@ -107,7 +107,7 @@ function startGame() {
 
     switch (gameNumb) {
         case 0:
-            alert("Select a game");
+            alert("You must select a game first");
             break;
         case 1:  
             fillBoard(board_1_Array);
@@ -136,28 +136,28 @@ function startGame() {
 
  // This function displays an image of the selected Suduko Board when completed
 function viewGameBoard() {
-        var gameNumb = document.getElementById("selectGame").selectedIndex;
+    var gameNumb = document.getElementById("selectGame").selectedIndex;
 
-        switch (gameNumb) {
-            case 0:
-                // Nothing to display
-                break;
-            case 1:  
-                window.open("./assets/images/completed_Suduko_Game1.jpeg", "Sudoku Game 1", "width=600, height=600");
-                break;
-            case 2:  
-                window.open("./assets/images/completed_Suduko_Game2.jpeg", "Sudoku Game 2", "width=600, height=600"); 
-                break;
-            case 3:  
-                window.open("./assets/images/completed_Suduko_Game3.jpeg", "Sudoku Game 3", "width=600, height=600");
-                break;
-            case 4:  
-                window.open("./assets/images/completed_Suduko_Game4.jpeg", "Sudoku Game 4", "width=600, height=600");
-                break;
-            default:
-                break;
-        }
+    switch (gameNumb) {
+        case 0:
+            // Nothing to display
+            break;
+        case 1:  
+            window.open("./assets/images/completed_Suduko_Game1.jpeg", "Sudoku Game 1", "width=600, height=600");
+            break;
+        case 2:  
+            window.open("./assets/images/completed_Suduko_Game2.jpeg", "Sudoku Game 2", "width=600, height=600"); 
+            break;
+        case 3:  
+            window.open("./assets/images/completed_Suduko_Game3.jpeg", "Sudoku Game 3", "width=600, height=600");
+            break;
+        case 4:  
+            window.open("./assets/images/completed_Suduko_Game4.jpeg", "Sudoku Game 4", "width=600, height=600");
+            break;
+        default:
+            break;
     }
+}
 
 // This function opens a .pdf file obtained from GoldStarPuzzles.com that has tips and rules for how to play Suduko
 function viewRules() {
@@ -250,7 +250,7 @@ function fillBoard(arry) {
     document.getElementById("bottom_right_position9").value = arry[81];
 }
 
-// This function will traverse a new game board and disable input fields that contain a number
+// This function will traverse a new game board and enable input fields that contain a number
 // This prevents players from changing these fields. They should only change blank fields.
 function enableInputFields() {
     markEnabled(document.getElementById("top_left_position1").value, "top_left_position1");
@@ -462,7 +462,7 @@ function colorChange(matched, elementInput, origColor) {
             audio.src = source;
             audio.autoplay = true;
             audio.play();
-            alert("Congratulations!! You have succesdfully completed the game.");
+            alert("Congratulations!! You have successfully completed the game.");
         }
 
     } else {

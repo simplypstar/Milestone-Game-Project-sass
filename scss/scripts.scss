@@ -1,9 +1,25 @@
+/* Cascading Style Sheet   */
+
+// Import partial CSS files
 @import "btnConfig";
 // @use "utilities";
 @import "config";
 
 
-/* Cascading Style Sheet   */
+// Allow Responsive Webdesign when resizing the browser window
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pageContent {
+    background-color: $primary-color;
+}
 
 h1 {
     font-family: $font-stack;
@@ -11,120 +27,125 @@ h1 {
     font-style: italic;
     text-align: center;
     font-Size: 30px;
-    color: rgb(205, 161, 38);
-    line-height: 10px;
+    color: $mainfont-color;
 }
 
 h2 {
-    font-family: $font-stack;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 20px;
+    font-family: $pfont-stack;
+    font-size: 14px;
+    line-height: 15px;
+    color: $mainfont-color;
 }
 
-.pageContent {
-    background-color: $primary-color;
-    min-width: 1080px;
-    min-height: 750px;
-    max-height: 1920px;
-}
-
-// Dropdown to select between games 1 - 4
+// Dropdown to select games 1 - 4
 .gameSelect {
-    display: flex;
-    font-family: $font-stack;
-    font-size: 16px;
-    font-weight: bolder;
-    text-align: center;
-    width: 350px;
-    border: 5px; 
-    margin: 0 auto auto 375px;
-
-    select {
-        font-family: $font-stack;
-        font-size: 16px;
+    border: 0px; 
+    width: 65%;
+    justify-content: center;
+//}    
+    #selectGame {
+        font-family: $pfont-stack;
         font-weight: bolder;
+        width: 45%;
     }
+} 
+
+// Created DIV container around the how to Sudoku board
+.sudokuBox {
+    border: 0px; 
+    margin: 0px auto;
+    border: none;
+    width: 65%;
 }
-
-
 /* Configure the Grid layout for the Suduko board */
 /* The board is comprised of 9 columns, 9 rows, and 81 small boxes */
 #top-row, #middle-row, #bottom-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid black;
-    width: 65%;
-    height: 100px;
-    margin-left: 215px; 
-}  
- 
- .col {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0px;
-    box-sizing: content-box;
-    border: 1px solid rgba(1, 1, 1);
-    box-sizing: border-box;
     width: 100%;
- }
-
- /* Add grid lines inside each grid box */
- .col > * {    
-    border: 1px solid black;    
+    height: 100px;
+    margin: 1px 1x;
+ 
+    // Format the appearance of the grid
+    .col {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: 1px solid rgba(1, 1, 1);
+        width: 100%;
+        margin: 0;
+        padding: 0px 0px;
     }
 
-/* Set the style for the input fields  */
-input { 
-    text-align: center; 
-    border: 2px;    
-    font-family: $input-font-stack;  
-    font-size: 20px;    
-    font-weight: bold;  
-    height: 25px;
-    width:  100%;   
-    margin: 0;  
-    background: transparent;
+    /* Add grid lines inside each grid box */
+    .col > * {    
+        border: 1px solid black;    
+        }
+
+    /* Set the style for the input fields  */
+    input { 
+        text-align: center; 
+        border: 1px;    
+        font-family: $input-font-stack;  
+        font-size: 20px;    
+        font-weight: bold;  
+        height: 25px;
+        width:  100%;   
+        background: transparent;
+    }
+
+    /* Change the background of a selected input field to yellow */  
+    input:focus {   
+        background-color: rgb(248, 248, 73);    
+    }
+
+    /* Remove scroll arrows from input fields*/ 
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
 }
 
-/* Change the background of a selected input field to yellow */  
-input:focus {   
-    background-color: rgb(248, 248, 73);    
-}
-
-/* Remove scroll arrows from input fields*/ 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
--webkit-appearance: none;
-} 
-
-/* Set the bsckground color for the grids */
+/* Set the background color for the grids */
 #top_left_grid, #top_right_grid, #middle_center_grid, 
 #bottom_left_grid, #bottom_right_grid {
     background-color: #c0dde6; 
 }
 
-/* Set the bsckground color for the grids */
+/* Set the background color for the grids */
 #top_center_grid, #middle_left_grid, #middle_right_grid, #bottom_center_grid {
     background-color: #e6f1f5;  
 }
 
+// Created DIV container around the how to play text-box
+.playInfo {
+    margin: 0 auto;
+    border: none;
+    width: 65%;
+}
 
 // Set the howtoplay text-box to wrap the contained text and
 // maintain the. Also set the text box to have the same width as
 // the game board with support for popular browsers
-.howtoplay {     // [type="text"]
+.howtoplay {
     white-space: pre-wrap; // CSS3
     white-space: -moz-pre-wrap;  // Firefox
     white-space: -o-pre-wrap; // Opera 7
     word-wrap: break-word; // I.E.
-    margin-left: 215px;
     font-family: $pfont-stack;
-    width: 65%;
+    width: 100%;
     text-align: justify;
     font-size: 16px;
+}
+
+// Created DIV container around the bottom buttons
+.numbrBtns {
+    font-family: $pfont-stack;
+    border: 2px black; 
+    margin: 0px auto;
+    //border: none;
+    width: 65%;
 }
 
 /* Buttons at the bottom of the game window used to fill the blank spaces on the board */
@@ -132,21 +153,16 @@ input::-webkit-inner-spin-button {
     @extend %numbbtn;
 } 
 
-/* The StartButton button runs the StartGame function which loads the form in the initial or start state */
+/* Format the appearance of these buttons */
+/* The StartButton, viewGameBoard and viewRules buttons run functions to complete their task */
 .startButton, .viewGameBoard, .viewRules {
     @extend %gamebtn;
 }
 
-/* Added animation to the buttons */
-.buttons:hover, .startButton:hover, .viewGameBoard:hover, .viewRules:hover   {
-    background-color: #3b6dec
-}
-
-/* Added color change when the mouse hovers over button */
-.buttons:active, .startButton:active, .viewGameBoard:active .viewRules:active {
-    background-color: #f86170;
-    box-shadow: 10px 5px 5px red; /*#666;*/
-    transform: translateY(2px);
+/* Change the startButton font color to Red and set its position in the browser */
+.startButton {
+    @extend %startbtn;
+    
 }
 
 
